@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+*.egg-info/
+
+# Virtual Environment
+venv/
+.env/
+.env.*
+
+# Airflow
+airflow/logs/
+airflow/airflow.db
+airflow/standalone_admin_password.txt
+
+# Data Pipeline Output
+data/raw/
+data/staging/data/
+data/dwh/data/
+data/datamart/data/
+
+# Keep folder
+!data/landing/.gitkeep
+!data/staging/query/.gitkeep
+!data/dwh/query/.gitkeep
+!data/datamart/query/.gitkeep
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Docker
+*.pid
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Secrets / Config
+.env
+config_local.py
