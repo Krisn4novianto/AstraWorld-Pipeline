@@ -36,22 +36,6 @@ Python 3.13 ✅
 
 ---
 
-README kamu sebenarnya sudah ada langkahnya, tapi **alur onboarding untuk orang baru masih kurang jelas**. Biasanya README yang bagus itu urutannya seperti ini:
-
-1. **Prerequisites (syarat sebelum jalanin)**
-2. **Clone repository**
-3. **Masuk ke project**
-4. **Setup environment**
-5. **Install dependencies**
-6. **Initialize Airflow**
-7. **Run Airflow**
-8. **Akses UI**
-9. **Trigger DAG**
-
-Aku rapihin jadi **alur yang lebih profesional dan mudah diikuti orang yang clone repo kamu**.
-
----
-
 # 🚀 Setup & Run Airflow (WSL2)
 
 Panduan ini menjelaskan cara menjalankan **Airflow orchestration** untuk pipeline ini menggunakan **WSL2 + Python virtual environment**.
