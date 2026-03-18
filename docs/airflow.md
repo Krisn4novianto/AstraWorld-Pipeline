@@ -36,13 +36,13 @@ Python 3.13 ✅
 
 ---
 
-# 🚀 Setup & Run Airflow (WSL2)
+## 🚀 Setup & Run Airflow (WSL2)
 
 Panduan ini menjelaskan cara menjalankan **Airflow orchestration** untuk pipeline ini menggunakan **WSL2 + Python virtual environment**.
 
 ---
 
-# 1️⃣ Prerequisites
+### 1️⃣ Prerequisites
 
 Pastikan sudah terinstall:
 
@@ -65,7 +65,7 @@ wsl -d Ubuntu
 
 ---
 
-# 2️⃣ Clone Repository
+### 2️⃣ Clone Repository
 
 Clone project ke komputer kamu.
 
@@ -87,7 +87,7 @@ cd /mnt/c/Users/User/Downloads/AstraWorld
 
 ---
 
-# 3️⃣ Verify Python Installation
+### 3️⃣ Verify Python Installation
 
 Pastikan Python sudah tersedia di WSL.
 
@@ -110,7 +110,7 @@ sudo apt install python3 python3-pip python3-venv -y
 
 ---
 
-# 4️⃣ Create Virtual Environment
+### 4️⃣ Create Virtual Environment
 
 Buat environment terpisah agar dependency project tidak bercampur dengan sistem.
 
@@ -134,7 +134,7 @@ source venv/bin/activate
 
 ---
 
-# 5️⃣ Install Apache Airflow
+### 5️⃣ Install Apache Airflow
 
 Install Airflow dengan constraint yang sesuai dengan versi Python.
 
@@ -151,7 +151,7 @@ airflow version
 
 ---
 
-# 6️⃣ Configure AIRFLOW_HOME
+### 6️⃣ Configure AIRFLOW_HOME
 
 Set folder Airflow agar berada di dalam project.
 
@@ -182,7 +182,7 @@ Gas, gue rapihin biar **lebih clean, profesional, dan jelas step-by-step** (biar
 
 ---
 
-# 7️⃣ Initialize Airflow Database
+### 7️⃣ Initialize Airflow Database
 
 Jalankan perintah berikut untuk inisialisasi database metadata Airflow:
 
@@ -192,7 +192,7 @@ airflow db migrate
 
 ---
 
-# 8️⃣ Start Airflow
+### 8️⃣ Start Airflow
 
 Jalankan Airflow dalam mode standalone:
 
@@ -211,9 +211,9 @@ Perintah ini akan otomatis menjalankan:
 
 ---
 
-# 🌐 Akses Airflow Web UI (WSL)
+## 🌐 Akses Airflow Web UI (WSL)
 
-## ⚠️ Penting
+### ⚠️ Penting
 
 Pada environment **WSL (Windows Subsystem for Linux)**, **jangan gunakan**:
 
@@ -221,9 +221,6 @@ Pada environment **WSL (Windows Subsystem for Linux)**, **jangan gunakan**:
 http://localhost:8080
 ```
 
----
-
-## ✅ Langkah Akses Web UI
 
 ### 1. Buka terminal baru (WSL)
 
@@ -263,7 +260,7 @@ http://172.26.181.10:8080
 
 ---
 
-# 🔐 Login Airflow
+## 🔐 Login Airflow
 
 Saat menjalankan:
 
@@ -282,17 +279,13 @@ Gunakan credential tersebut untuk login ke Airflow Web UI.
 
 ---
 
-Ini aku **rapihin + benahin format README** supaya lebih profesional, konsisten, dan enak dibaca (biasanya dipakai di dokumentasi GitHub / project data engineering).
-
----
-
-# 🌐 Menggunakan Airflow Web UI
+## 🌐 Menggunakan Airflow Web UI
 
 Setelah berhasil login ke **Airflow Web UI**, langkah selanjutnya adalah **menjalankan dan memonitor pipeline**.
 
 ---
 
-## 🔍 1. Masuk ke Menu DAGs
+### 🔍 1. Masuk ke Menu DAGs
 
 Pada halaman utama Airflow:
 
@@ -306,7 +299,7 @@ daily_pipeline
 
 ---
 
-## ▶️ 2. Aktifkan DAG
+### ▶️ 2. Aktifkan DAG
 
 Sebelum menjalankan pipeline, DAG harus diaktifkan terlebih dahulu.
 
@@ -320,7 +313,7 @@ Jika DAG tidak diaktifkan, pipeline **tidak dapat dijalankan** baik secara manua
 
 ---
 
-## 🚀 3. Trigger Pipeline (Manual Run)
+### 🚀 3. Trigger Pipeline (Manual Run)
 
 Untuk menjalankan pipeline secara manual:
 
@@ -329,7 +322,7 @@ Untuk menjalankan pipeline secara manual:
 
 ---
 
-## 📊 4. Monitoring Pipeline
+### 📊 4. Monitoring Pipeline
 
 Setelah pipeline dijalankan:
 
@@ -341,7 +334,7 @@ Setelah pipeline dijalankan:
 
 Di halaman ini Anda dapat melihat **status setiap task**.
 
-### Status Task
+#### Status Task
 
 | Status     | Arti                           |
 | ---------- | ------------------------------ |
@@ -352,7 +345,7 @@ Di halaman ini Anda dapat melihat **status setiap task**.
 
 ---
 
-## 🔗 5. Struktur Task Pipeline
+### 🔗 5. Struktur Task Pipeline
 
 Pipeline terdiri dari beberapa task yang berjalan **secara berurutan**:
 
@@ -366,7 +359,7 @@ Pipeline terdiri dari beberapa task yang berjalan **secara berurutan**:
 
 ---
 
-## 🧪 6. Debugging Jika Pipeline Gagal
+### 🧪 6. Debugging Jika Pipeline Gagal
 
 Jika ada task berwarna **merah (Failed)**:
 
@@ -382,7 +375,7 @@ Jika ada task berwarna **merah (Failed)**:
 
 ---
 
-## 🔁 7. Retry Task
+### 🔁 7. Retry Task
 
 Jika sebuah task gagal:
 
@@ -394,7 +387,7 @@ Airflow akan mencoba menjalankan task kembali.
 
 ---
 
-## ⏱️ 8. Scheduling (Otomatis Harian)
+### ⏱️ 8. Scheduling (Otomatis Harian)
 
 DAG ini menggunakan schedule:
 
@@ -408,7 +401,7 @@ Pipeline akan berjalan **setiap hari pada pukul 02:00 UTC** secara otomatis.
 
 ---
 
-## 📈 9. View Tambahan di Airflow
+### 📈 9. View Tambahan di Airflow
 
 Airflow menyediakan beberapa tampilan untuk memonitor pipeline:
 
@@ -418,4 +411,5 @@ Airflow menyediakan beberapa tampilan untuk memonitor pipeline:
 | **Graph View**    | Menampilkan alur pipeline                     |
 | **Gantt View**    | Melihat durasi setiap task                    |
 | **Calendar View** | Melihat riwayat eksekusi pipeline             |
+
 
