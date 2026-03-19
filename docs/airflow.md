@@ -178,9 +178,6 @@ $AIRFLOW_HOME/dags/
 ```
 
 ---
-Gas, gue rapihin biar **lebih clean, profesional, dan jelas step-by-step** (biar enak dibaca recruiter juga) 👇
-
----
 
 ### 7️⃣ Initialize Airflow Database
 
